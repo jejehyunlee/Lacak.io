@@ -24,7 +24,10 @@ public class SuggestionServiceImpl implements SuggestionService {
 
         return locationList.stream().map(location -> {
             double score = calculateScore(location, query, latitude, longitude);
-            return new SuggestionResponse(location.getName(), location.getLat(), location.getLon(), score);
+
+            String formatName = location.getName()+" , "+location.getCountry() +" , "+ location.getTz();
+
+            return new SuggestionResponse(formatName, location.getLat(), location.getLon(), score);
         })
                 .sorted((SuggestionResponse o1, SuggestionResponse o2) -> Double.compare(o2.getScore(), o1.getScore()))
                 .collect(Collectors.toList());
@@ -37,8 +40,8 @@ public class SuggestionServiceImpl implements SuggestionService {
         double populationScore = Math.log10(location.getPopulation() + 1) / 10.0;
 
         if (latitude != null && longitude != null) {
-            double distanceactor = 1 / (1 + calculateDistance(location.getLat(), location.getLon(), latitude, longitude));
-            return Math.min(1.0, baseScore + populationScore * 0.2 + distanceactor * 0.5);
+            double distanceFactor = 1 / (1 + calculateDistance(location.getLat(), location.getLon(), latitude, longitude));
+            return Math.min(1.0, baseScore + populationScore * 0.2 + distanceFactor * 0.5);
         }
         return Math.min(1.0, baseScore + populationScore * 0.3);
     }

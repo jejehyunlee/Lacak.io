@@ -44,7 +44,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/suggestions?q=london&latitude=43.70011&longitude=-79.4163",
+							"raw": "http://localhost:8080/suggestions?q=alma&latitude=48.55009&longitude=-71.6491",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -56,15 +56,15 @@
 							"query": [
 								{
 									"key": "q",
-									"value": "london"
+									"value": "alma"
 								},
 								{
 									"key": "latitude",
-									"value": "43.70011"
+									"value": "48.55009"
 								},
 								{
 									"key": "longitude",
-									"value": "-79.4163"
+									"value": "-71.6491"
 								}
 							]
 						}
@@ -83,7 +83,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Wed, 29 Jan 2025 07:05:32 GMT"
+							"value": "Wed, 29 Jan 2025 10:00:22 GMT"
 						},
 						{
 							"key": "Keep-Alive",
@@ -95,7 +95,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"suggestions\": [\n        {\n            \"name\": \"London\",\n            \"latitude\": 42.98339,\n            \"longitude\": -81.23304,\n            \"score\": 0.8108011997377126\n        },\n        {\n            \"name\": \"Londonderry\",\n            \"latitude\": 42.86509,\n            \"longitude\": -71.37395,\n            \"score\": 0.7808579271878179\n        },\n        {\n            \"name\": \"London\",\n            \"latitude\": 39.88645,\n            \"longitude\": -83.44825,\n            \"score\": 0.7799172349835196\n        },\n        {\n            \"name\": \"Londontowne\",\n            \"latitude\": 38.93345,\n            \"longitude\": -76.54941,\n            \"score\": 0.7780825392320178\n        },\n        {\n            \"name\": \"London\",\n            \"latitude\": 37.12898,\n            \"longitude\": -84.08326,\n            \"score\": 0.7780553773978267\n        },\n        {\n            \"name\": \"New London\",\n            \"latitude\": 41.35565,\n            \"longitude\": -72.09952,\n            \"score\": 0.5888249080521405\n        },\n        {\n            \"name\": \"New London\",\n            \"latitude\": 44.39276,\n            \"longitude\": -88.73983,\n            \"score\": 0.5772618013242236\n        }\n    ]\n}"
+					"body": "{\n    \"suggestions\": [\n        {\n            \"name\": \"Alma , CA , America/Montreal\",\n            \"latitude\": 48.55009,\n            \"longitude\": -71.6491,\n            \"score\": 1\n        },\n        {\n            \"name\": \"Alma , US , America/Detroit\",\n            \"latitude\": 43.37892,\n            \"longitude\": -84.65973,\n            \"score\": 0.7794478278611103\n        },\n        {\n            \"name\": \"Alma , US , America/Chicago\",\n            \"latitude\": 35.47787,\n            \"longitude\": -94.22188,\n            \"score\": 0.7746800191393557\n        },\n        {\n            \"name\": \"West and East Lealman , US , America/New_York\",\n            \"latitude\": 27.81993,\n            \"longitude\": -82.68944,\n            \"score\": 0.5868188235233074\n        },\n        {\n            \"name\": \"Lealman , US , America/New_York\",\n            \"latitude\": 27.82114,\n            \"longitude\": -82.67927,\n            \"score\": 0.5859683590895725\n        },\n        {\n            \"name\": \"La Palma , US , America/Los_Angeles\",\n            \"latitude\": 33.8464,\n            \"longitude\": -118.04673,\n            \"score\": 0.5838452333503994\n        }\n    ]\n}"
 				}
 			]
 		},

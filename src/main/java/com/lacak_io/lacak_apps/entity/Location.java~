@@ -1,0 +1,52 @@
+package com.lacak_io.lacak_apps.entity;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Entity
+@Table(name = "locations")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder(toBuilder = true)
+public class Location {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    private String name;
+    private String ascii;
+
+    @Column(name = "alt_name")
+    private String altName;
+    private Double lat;
+    private Double lon;
+
+    @Column(name = "feat_class")
+    private String featClass;
+
+    @Column(name = "feat_code")
+    private String featCode;
+    private String country;
+    private String cc2;
+    private String admin1;
+    private String admin2;
+    private String admin3;
+    private String admin4;
+    private Long population;
+    private Integer elevation;
+    private Integer dem;
+    private String tz;
+
+    @Column(name = "modified_at")
+    private String modifiedAt;
+}
+

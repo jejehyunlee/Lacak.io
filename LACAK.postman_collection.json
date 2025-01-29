@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "dce01e2a-b31e-4951-96ef-e7127dbb323a",
+		"name": "LACAK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21524155"
+	},
+	"item": [
+		{
+			"name": "Suggestions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/suggestions?q=lon&latitude=43.70011&longitude=-79.4163",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"suggestions"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "lon"
+						},
+						{
+							"key": "latitude",
+							"value": "43.70011"
+						},
+						{
+							"key": "longitude",
+							"value": "-79.4163"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "[Suggestions] 200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/suggestions?q=london&latitude=43.70011&longitude=-79.4163",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"suggestions"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "london"
+								},
+								{
+									"key": "latitude",
+									"value": "43.70011"
+								},
+								{
+									"key": "longitude",
+									"value": "-79.4163"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Jan 2025 07:05:32 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"suggestions\": [\n        {\n            \"name\": \"London\",\n            \"latitude\": 42.98339,\n            \"longitude\": -81.23304,\n            \"score\": 0.8108011997377126\n        },\n        {\n            \"name\": \"Londonderry\",\n            \"latitude\": 42.86509,\n            \"longitude\": -71.37395,\n            \"score\": 0.7808579271878179\n        },\n        {\n            \"name\": \"London\",\n            \"latitude\": 39.88645,\n            \"longitude\": -83.44825,\n            \"score\": 0.7799172349835196\n        },\n        {\n            \"name\": \"Londontowne\",\n            \"latitude\": 38.93345,\n            \"longitude\": -76.54941,\n            \"score\": 0.7780825392320178\n        },\n        {\n            \"name\": \"London\",\n            \"latitude\": 37.12898,\n            \"longitude\": -84.08326,\n            \"score\": 0.7780553773978267\n        },\n        {\n            \"name\": \"New London\",\n            \"latitude\": 41.35565,\n            \"longitude\": -72.09952,\n            \"score\": 0.5888249080521405\n        },\n        {\n            \"name\": \"New London\",\n            \"latitude\": 44.39276,\n            \"longitude\": -88.73983,\n            \"score\": 0.5772618013242236\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "UPLOAD TSV",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"import"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "[Upload DATA .Tsv] 200 OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/import",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"import"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/plain;charset=UTF-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 29 Jan 2025 07:04:50 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "Import sukses!"
+				}
+			]
+		}
+	]
+}
